@@ -22,10 +22,9 @@ object Version {
 }
 
 object Project {
-    const val constants = ":constants"
     const val data = ":data"
     const val domain = ":domain"
-    const val presentation = ":presentation"
+    const val ui = ":ui"
 }
 
 object Dependencies {
