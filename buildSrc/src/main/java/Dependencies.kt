@@ -3,7 +3,7 @@ object Version {
     const val swipeRefreshLayout = "1.1.0"
     const val activityKtx = "1.5.1"
     const val fragmentKtx = "1.5.2"
-    const val viewModelKtx = "2.6.0-alpha01"
+    const val viewModelKtx = "2.5.1"
     const val recyclerView = "1.3.0-alpha02"
     const val retrofit = "2.9.0"
     const val coil = "2.1.0"
@@ -13,7 +13,7 @@ object Version {
     const val hiltCompiler = "1.0.0"
     const val kotlin = "1.6.10"
     const val core = "1.8.0"
-    const val appcompat = "1.5.0"
+    const val appcompat = "1.4.2"
     const val material = "1.6.1"
     const val junit = "4.13.2"
     const val androidJunit = "1.1.3"
@@ -22,10 +22,9 @@ object Version {
 }
 
 object Project {
-    const val constants = ":constants"
     const val data = ":data"
     const val domain = ":domain"
-    const val presentation = ":presentation"
+    const val ui = ":ui"
 }
 
 object Dependencies {
