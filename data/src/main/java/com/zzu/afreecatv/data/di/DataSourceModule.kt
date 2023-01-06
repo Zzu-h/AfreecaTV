@@ -1,7 +1,7 @@
 package com.zzu.afreecatv.data.di
 
-import com.zzu.afreecatv.data.datasource.test.TestDataSource
-import com.zzu.afreecatv.data.datasource.test.TestDataSourceImpl
+import com.zzu.afreecatv.data.datasource.broad.BroadDataSource
+import com.zzu.afreecatv.data.datasource.broad.BroadDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -15,6 +15,6 @@ abstract class DataSourceModule {
     @Singleton
     @Binds
     abstract fun provideTestDataSource(
-        testDataSource: TestDataSourceImpl
-    ): TestDataSource
+        testDataSource: BroadDataSourceImpl
+    ): BroadDataSource
 }
