@@ -1,11 +1,12 @@
 plugins {
-    id ("com.android.library")
-    id ("org.jetbrains.kotlin.android")
-    id ("kotlin-kapt")
-    id ("dagger.hilt.android.plugin")
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
+    namespace = Config.applicationId + ".domain"
     compileSdk = Config.compileSdk
 
     defaultConfig {
@@ -28,16 +29,16 @@ android {
 
 dependencies {
 
-    implementation(project(Project.domain))
+    implementation(project(Project.data))
 
     //Hilt
-    implementation (Dependencies.Hilt.hiltAndroid)
-    kapt (Dependencies.Hilt.hiltAndroidCompiler)
+    implementation(Dependencies.Hilt.hiltAndroid)
+    kapt(Dependencies.Hilt.hiltAndroidCompiler)
 
     //Flow
-    implementation (Dependencies.Coroutines.core)
+    implementation(Dependencies.Coroutines.core)
 
     //Retrofit2
-    implementation (Dependencies.Network.retrofit)
-    implementation (Dependencies.Network.retrofitGson)
+    implementation(Dependencies.Network.retrofit)
+    implementation(Dependencies.Network.retrofitGson)
 }

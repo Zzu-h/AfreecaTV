@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+    namespace = Config.applicationId + ".data"
     compileSdk = Config.compileSdk
 
     defaultConfig {
@@ -27,8 +28,6 @@ android {
 }
 
 dependencies {
-
-    implementation(project(Project.domain))
 
     //Hilt
     implementation (Dependencies.Hilt.hiltAndroid)

@@ -38,7 +38,6 @@ android {
 }
 
 dependencies {
-    implementation(project(Project.data))
     implementation(project(Project.domain))
 
     implementation (Dependencies.Androidx.core)
