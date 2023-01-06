@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -24,6 +26,14 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    val baseUrl: String = gradleLocalProperties(rootDir).getProperty("BASE_URL")
+    val clientId: String = gradleLocalProperties(rootDir).getProperty("CLIENT_ID")
+
+    defaultConfig {
+        buildConfigField("String", "BASE_URL", baseUrl)
+        buildConfigField("String", "CLIENT_ID", clientId)
     }
 }
 
