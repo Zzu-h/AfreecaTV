@@ -39,7 +39,6 @@ class HomeFragment : Fragment() {
 
     private fun initObserver() {
         viewModel.categoryList.onEach {
-            Log.d("Tester", "initObserver: $it")
             if (it.isNotEmpty()) initViewPager(it.subList(0, 5))
         }.launchIn(this.lifecycleScope)
     }
