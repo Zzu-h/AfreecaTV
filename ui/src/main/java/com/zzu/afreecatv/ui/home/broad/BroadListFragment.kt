@@ -1,7 +1,6 @@
 package com.zzu.afreecatv.ui.home.broad
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +8,10 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import com.zzu.afreecatv.R
 import com.zzu.afreecatv.databinding.FragmentBroadListBinding
 import com.zzu.afreecatv.domain.model.Broad
+import com.zzu.afreecatv.ui.detail.DetailFragment
 import com.zzu.afreecatv.ui.home.broad.adapter.BroadRVAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
@@ -57,10 +56,13 @@ class BroadListFragment : Fragment() {
         broadRVAdapter = BroadRVAdapter().apply {
             listener = object : BroadRVAdapter.OnClickListener {
                 override fun onClickItem(item: Broad) {
-                    val bundle = Bundle()
-                    bundle.putSerializable("broad", item)
-                    findNavController().navigate(R.id.action_HomeFragment_to_DetailFragment, bundle)
-                    Log.d("Tester", "onClickItem: $item")
+                    val bundle = Bundle().apply { putSerializable("broad", item) }
+
+                    requireParentFragment().parentFragmentManager.beginTransaction()
+                        .addToBackStack(null)
+                        .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                        .replace(R.id.fcv_content, DetailFragment().apply { arguments = bundle })
+                        .commitAllowingStateLoss()
                 }
             }
         }

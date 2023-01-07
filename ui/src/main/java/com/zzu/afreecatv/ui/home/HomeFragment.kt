@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
     private fun initViewPager(list: List<Category>) {
         binding?.let {
             it.vpContent.adapter = HomeVPAdapter(
-                this.parentFragmentManager,
+                this.childFragmentManager,
                 this.lifecycle,
                 list.map { i -> BroadListFragment.newInstance(i.cateNo) }
             )
