@@ -4,6 +4,7 @@ object Version {
     const val activityKtx = "1.5.1"
     const val fragmentKtx = "1.5.2"
     const val viewModelKtx = "2.5.1"
+    const val navigationKtx = "2.5.3"
     const val recyclerView = "1.3.0-alpha02"
     const val retrofit = "2.9.0"
     const val coil = "2.1.0"
@@ -37,6 +38,8 @@ object Dependencies {
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Version.constraintLayout}"
         const val activityKtx = "androidx.activity:activity-ktx:${Version.activityKtx}"
         const val fragmentKtx = "androidx.fragment:fragment-ktx:${Version.fragmentKtx}"
+        const val navFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Version.navigationKtx}"
+        const val navUiKtx = "androidx.navigation:navigation-ui-ktx:${Version.navigationKtx}"
         const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.viewModelKtx}"
         const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Version.swipeRefreshLayout}"
     }
