@@ -74,7 +74,7 @@
     </style>
 
     <style name="text.medium" parent="text">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="text.medium.bold" parent="text.medium">
@@ -82,7 +82,7 @@
     </style>
 
     <style name="text.small" parent="text">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="text.small.bold" parent="text.small">
@@ -115,11 +115,11 @@
     </style>
 
     <style name="description.medium" parent="description">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">10sp</item>
     </style>
 
     <style name="description.small" parent="description">
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">8sp</item>
     </style>
 
     <!--ShapeableImage-->
