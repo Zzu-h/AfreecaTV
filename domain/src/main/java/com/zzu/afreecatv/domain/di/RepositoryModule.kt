@@ -1,7 +1,7 @@
 package com.zzu.afreecatv.domain.di
 
-import com.zzu.afreecatv.domain.repository.test.TestRepository
-import com.zzu.afreecatv.domain.repository.test.impl.TestRepositoryImpl
+import com.zzu.afreecatv.domain.repository.broad.BroadRepository
+import com.zzu.afreecatv.domain.repository.broad.impl.BroadRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -14,7 +14,7 @@ abstract class RepositoryModule {
 
     @Singleton
     @Binds
-    abstract fun provideTestRepository(
-        testRepository: TestRepositoryImpl
-    ): TestRepository
+    abstract fun provideBroadRepository(
+        broadRepository: BroadRepositoryImpl
+    ): BroadRepository
 }

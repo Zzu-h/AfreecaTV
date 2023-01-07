@@ -13,7 +13,7 @@ class BroadDataSourceImpl @Inject constructor(
     override suspend fun getAllBroadList(pageNo: Int): BroadListDto =
         broadService.getAllBroadList(pageNo)
 
-    override suspend fun getBroadListByCategoryNo(categoryNo: Int, pageNo: Int): List<BroadDto> =
+    override suspend fun getBroadListByCategoryNo(categoryNo: String, pageNo: Int): List<BroadDto> =
         broadService.getBroadListByCategoryNo(categoryNo, pageNo).broad
 
     override suspend fun getBroadCategoryList(): List<BroadCategoryDto> =

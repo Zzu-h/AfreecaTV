@@ -6,7 +6,7 @@ import com.zzu.afreecatv.data.dto.BroadListDto
 
 interface BroadDataSource {
 
-    suspend fun getAllBroadList(pageNo: Int = 1): BroadListDto
-    suspend fun getBroadListByCategoryNo(categoryNo: Int, pageNo: Int = 1): List<BroadDto>
+    suspend fun getAllBroadList(pageNo: Int): BroadListDto
+    suspend fun getBroadListByCategoryNo(categoryNo: String, pageNo: Int): List<BroadDto>
     suspend fun getBroadCategoryList(): List<BroadCategoryDto>
 }
