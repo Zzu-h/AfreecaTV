@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="item"
+            type="com.zzu.afreecatv.domain.model.Broad" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,14 +20,37 @@
             android:id="@+id/iv_thumbnail"
             android:layout_width="200dp"
             android:layout_height="0dp"
-
             android:scaleType="center"
             android:src="@drawable/ic_afreeca"
+            app:image="@{item.broadThumb}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="9:5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_red_dot"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_margin="5dp"
+            android:background="@color/red"
+            app:layout_constraintStart_toStartOf="@id/iv_thumbnail"
+            app:layout_constraintTop_toTopOf="@id/iv_thumbnail"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize100Percent"
+            tools:tint="@color/red" />
+
+        <TextView
+            android:id="@+id/tv_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textAppearance="@style/text.verySmall.bold"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_red_dot"
+            app:layout_constraintStart_toEndOf="@id/iv_red_dot"
+            app:layout_constraintTop_toTopOf="@id/iv_red_dot"
+            tools:text="LIVE" />
 
         <TextView
             android:id="@+id/tv_title"
@@ -34,6 +60,7 @@
             android:ellipsize="end"
             android:maxWidth="170dp"
             android:maxLines="2"
+            android:text="@{item.broadTitle}"
             android:textAppearance="@style/text.medium"
             app:layout_constraintStart_toEndOf="@id/iv_thumbnail"
             app:layout_constraintTop_toTopOf="@id/iv_thumbnail"
@@ -46,6 +73,7 @@
             android:layout_marginTop="5dp"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_afreeca"
+            app:image="@{item.profileImg}"
             app:layout_constraintStart_toStartOf="@id/tv_title"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
             app:shapeAppearance="@style/ShapeAppearanceOverlay.App.CornerSize100Percent" />
@@ -58,6 +86,7 @@
             android:ellipsize="end"
             android:maxWidth="80dp"
             android:maxLines="1"
+            android:text="@{item.userNick}"
             android:textAppearance="@style/text.small"
             app:layout_constraintStart_toEndOf="@id/iv_bj_profile_img"
             app:layout_constraintTop_toTopOf="@id/iv_bj_profile_img"
@@ -96,6 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
+            android:text="@{item.userId}"
             android:textAppearance="@style/text.small"
             app:layout_constraintBottom_toBottomOf="@id/iv_people"
             app:layout_constraintStart_toEndOf="@id/iv_people"
