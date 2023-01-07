@@ -14,7 +14,7 @@ class BroadRepositoryImpl @Inject constructor(
     override suspend fun getAllBroadList(pageNo: Int): List<Broad> =
         broadDataSource.getAllBroadList(pageNo).broad.map { it.toModel() }
 
-    override suspend fun getBroadListByCategoryNo(categoryNo: Int, pageNo: Int): List<Broad> =
+    override suspend fun getBroadListByCategoryNo(categoryNo: String, pageNo: Int): List<Broad> =
         broadDataSource.getBroadListByCategoryNo(categoryNo, pageNo).map { it.toModel() }
 
     override suspend fun getBroadCategoryList(): List<Category> =

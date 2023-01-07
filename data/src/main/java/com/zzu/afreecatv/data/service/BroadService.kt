@@ -16,7 +16,7 @@ interface BroadService {
 
     @GET("/broad/list")
     suspend fun getBroadListByCategoryNo(
-        @Query("select_value") selectValue: Int,
+        @Query("select_value") selectValue: String,
         @Query("page_no") pageNo: Int,
         @Query("client_id") clientId: String = BuildConfig.CLIENT_ID
     ): BroadListDto
