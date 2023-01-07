@@ -44,6 +44,8 @@ dependencies {
     implementation (Dependencies.Androidx.appcompat)
     implementation (Dependencies.Material.material)
     implementation (Dependencies.Androidx.constraintLayout)
+    implementation (Dependencies.Androidx.navFragmentKtx)
+    implementation (Dependencies.Androidx.navUiKtx)
     testImplementation (Dependencies.Test.junit)
     testImplementation (Dependencies.Coroutines.test)
     testImplementation (Dependencies.Network.mockWebServer)
