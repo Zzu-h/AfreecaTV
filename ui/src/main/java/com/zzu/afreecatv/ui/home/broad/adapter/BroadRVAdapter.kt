@@ -11,8 +11,10 @@ import com.zzu.afreecatv.ui.home.broad.viewholder.BroadViewHolder
 class BroadRVAdapter :
     ListAdapter<Broad, BroadViewHolder>(diffUtil) {
 
+    lateinit var listener: OnClickListener
+
     override fun onBindViewHolder(holder: BroadViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), listener)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BroadViewHolder {
@@ -31,5 +33,9 @@ class BroadRVAdapter :
                 return oldItem == newItem
             }
         }
+    }
+
+    interface OnClickListener {
+        fun onClickItem(item: Broad)
     }
 }

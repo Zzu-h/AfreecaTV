@@ -8,19 +8,26 @@
         <variable
             name="item"
             type="com.zzu.afreecatv.domain.model.Broad" />
+
+        <variable
+            name="listener"
+            type="com.zzu.afreecatv.ui.home.broad.adapter.BroadRVAdapter.OnClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="5dp">
+        android:layout_marginVertical="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{() -> listener.onClickItem(item)}">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_thumbnail"
             android:layout_width="200dp"
             android:layout_height="0dp"
-            android:scaleType="center"
+            android:scaleType="fitCenter"
             android:src="@drawable/ic_afreeca"
             app:image="@{item.broadThumb}"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -45,12 +52,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
+            android:elevation="5dp"
+            android:text="LIVE"
             android:textAppearance="@style/text.verySmall.bold"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/iv_red_dot"
             app:layout_constraintStart_toEndOf="@id/iv_red_dot"
-            app:layout_constraintTop_toTopOf="@id/iv_red_dot"
-            tools:text="LIVE" />
+            app:layout_constraintTop_toTopOf="@id/iv_red_dot" />
 
         <TextView
             android:id="@+id/tv_title"
