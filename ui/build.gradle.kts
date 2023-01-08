@@ -62,19 +62,12 @@ dependencies {
     //Coil
     implementation (Dependencies.Coil.coil)
 
-    //Retrofit2
-    implementation (Dependencies.Network.retrofit)
-    implementation (Dependencies.Network.retrofitGson)
-
     implementation (Dependencies.Androidx.recyclerView)
 
     //ktx
     implementation (Dependencies.Androidx.activityKtx)
     implementation (Dependencies.Androidx.fragmentKtx)
     implementation (Dependencies.Androidx.viewModelKtx)
-
-    //SwipeRefreshLayout
-    implementation (Dependencies.Androidx.swipeRefreshLayout)
 
     //Paging3
     implementation (Dependencies.Paging.paging)
