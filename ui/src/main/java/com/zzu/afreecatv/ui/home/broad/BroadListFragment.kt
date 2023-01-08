@@ -14,8 +14,9 @@ import com.zzu.afreecatv.domain.model.Broad
 import com.zzu.afreecatv.ui.detail.DetailFragment
 import com.zzu.afreecatv.ui.home.broad.adapter.BroadRVAdapter
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class BroadListFragment : Fragment() {
@@ -47,9 +48,9 @@ class BroadListFragment : Fragment() {
     }
 
     private fun initObserver() {
-        viewModel.broadList.onEach {
-            broadRVAdapter.submitList(it)
-        }.launchIn(this.lifecycleScope)
+        lifecycleScope.launch(Dispatchers.IO) {
+            viewModel.broadList.collectLatest { broadRVAdapter.submitData(it) }
+        }
     }
 
     private fun initRecyclerView() {
