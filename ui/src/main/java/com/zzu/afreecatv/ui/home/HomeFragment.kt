@@ -1,7 +1,6 @@
 package com.zzu.afreecatv.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -55,11 +54,6 @@ class HomeFragment : Fragment() {
             }.attach()
             it.vpContent.offscreenPageLimit = list.size
         }
-    }
-
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 
     override fun onDestroyView() {

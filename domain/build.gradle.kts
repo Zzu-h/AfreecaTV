@@ -39,6 +39,6 @@ dependencies {
     implementation(Dependencies.Coroutines.core)
 
     //Paging3
-    implementation (Dependencies.Paging.paging)
-    implementation (Dependencies.Paging.pagingKtx)
+    implementation(Dependencies.Paging.paging)
+    implementation(Dependencies.Paging.pagingKtx)
 }

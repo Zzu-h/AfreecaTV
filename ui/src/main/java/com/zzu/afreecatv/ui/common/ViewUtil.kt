@@ -1,7 +1,6 @@
 package com.zzu.afreecatv.ui.common
 
 import android.annotation.SuppressLint
-import android.util.Log
 import android.webkit.URLUtil
 import android.webkit.WebView
 import android.webkit.WebViewClient
