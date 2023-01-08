@@ -4,6 +4,7 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.zzu.afreecatv.data.datasource.broad.BroadDataSource
 import com.zzu.afreecatv.data.dto.BroadDto
+import kotlinx.coroutines.delay
 
 class BroadPagingSource(
     private val broadDataSource: BroadDataSource,
@@ -22,6 +23,8 @@ class BroadPagingSource(
             val page = params.key ?: 1
 
             val item = broadDataSource.getBroadListByCategoryNo(query, page)
+
+            if(page != 1) delay(500L)
 
             LoadResult.Page(
                 data = item,
