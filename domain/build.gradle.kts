@@ -38,7 +38,7 @@ dependencies {
     //Flow
     implementation(Dependencies.Coroutines.core)
 
-    //Retrofit2
-    implementation(Dependencies.Network.retrofit)
-    implementation(Dependencies.Network.retrofitGson)
+    //Paging3
+    implementation (Dependencies.Paging.paging)
+    implementation (Dependencies.Paging.pagingKtx)
 }
