@@ -2,19 +2,19 @@ package com.zzu.afreecatv.ui.home.broad.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import com.zzu.afreecatv.databinding.ItemBroadBinding
 import com.zzu.afreecatv.domain.model.Broad
 import com.zzu.afreecatv.ui.home.broad.viewholder.BroadViewHolder
 
 class BroadRVAdapter :
-    ListAdapter<Broad, BroadViewHolder>(diffUtil) {
+    PagingDataAdapter<Broad, BroadViewHolder>(diffUtil) {
 
     lateinit var listener: OnClickListener
 
     override fun onBindViewHolder(holder: BroadViewHolder, position: Int) {
-        holder.bind(getItem(position), listener)
+        getItem(position)?.let { holder.bind(it, listener) }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BroadViewHolder {

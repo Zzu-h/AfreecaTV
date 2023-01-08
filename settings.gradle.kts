@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "AfreecaTV"
-include (":ui")
-include (":domain")
-include (":data")
+include(":ui")
+include(":domain")
+include(":data")
