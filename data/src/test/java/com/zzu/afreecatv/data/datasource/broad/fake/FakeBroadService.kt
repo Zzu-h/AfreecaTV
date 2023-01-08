@@ -1,4 +1,4 @@
-package com.zzu.afreecatv.data.impl.service
+package com.zzu.afreecatv.data.datasource.broad.fake
 
 import com.zzu.afreecatv.data.dto.BroadCategoryBodyDto
 import com.zzu.afreecatv.data.dto.BroadCategoryDto
