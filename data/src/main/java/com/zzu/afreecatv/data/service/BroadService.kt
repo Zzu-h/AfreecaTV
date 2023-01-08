@@ -21,7 +21,7 @@ interface BroadService {
         @Query("client_id") clientId: String = BuildConfig.CLIENT_ID
     ): BroadListDto
 
-    @GET("/broad/list")
+    @GET("/broad/category/list")
     suspend fun getBroadCategoryList(
         @Query("client_id") clientId: String = BuildConfig.CLIENT_ID
     ): BroadCategoryBodyDto
