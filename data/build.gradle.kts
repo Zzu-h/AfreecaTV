@@ -39,6 +39,14 @@ android {
 
 dependencies {
 
+    //Test
+    testImplementation (Dependencies.Test.junit)
+    testImplementation (Dependencies.Coroutines.test)
+    testImplementation (Dependencies.Network.mockWebServer)
+    androidTestImplementation (Dependencies.Coroutines.test)
+    androidTestImplementation (Dependencies.Androidx.junit)
+    androidTestImplementation (Dependencies.Androidx.espresso)
+
     //Hilt
     implementation(Dependencies.Hilt.hiltAndroid)
     kapt(Dependencies.Hilt.hiltAndroidCompiler)
