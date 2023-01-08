@@ -34,11 +34,14 @@ object Dependencies {
         const val espresso = "androidx.test.espresso:espresso-core:${Version.espresso}"
         const val appcompat = "androidx.appcompat:appcompat:${Version.appcompat}"
         const val recyclerView = "androidx.recyclerview:recyclerview:${Version.recyclerView}"
-        const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Version.constraintLayout}"
+        const val constraintLayout =
+            "androidx.constraintlayout:constraintlayout:${Version.constraintLayout}"
         const val activityKtx = "androidx.activity:activity-ktx:${Version.activityKtx}"
         const val fragmentKtx = "androidx.fragment:fragment-ktx:${Version.fragmentKtx}"
-        const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.viewModelKtx}"
-        const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Version.swipeRefreshLayout}"
+        const val viewModelKtx =
+            "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.viewModelKtx}"
+        const val swipeRefreshLayout =
+            "androidx.swiperefreshlayout:swiperefreshlayout:${Version.swipeRefreshLayout}"
     }
 
     object Paging {

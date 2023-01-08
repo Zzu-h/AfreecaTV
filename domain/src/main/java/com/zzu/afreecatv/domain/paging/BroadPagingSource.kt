@@ -24,7 +24,7 @@ class BroadPagingSource(
 
             val item = broadDataSource.getBroadListByCategoryNo(query, page)
 
-            if(page != 1) delay(500L)
+            if (page != 1) delay(500L)
 
             LoadResult.Page(
                 data = item,

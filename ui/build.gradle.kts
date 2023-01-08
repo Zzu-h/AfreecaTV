@@ -1,8 +1,8 @@
 plugins {
-    id ("com.android.application")
-    id ("org.jetbrains.kotlin.android")
-    id ("kotlin-kapt")
-    id ("dagger.hilt.android.plugin")
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -21,7 +21,10 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -40,36 +43,36 @@ android {
 dependencies {
     implementation(project(Project.domain))
 
-    implementation (Dependencies.Androidx.core)
-    implementation (Dependencies.Androidx.appcompat)
-    implementation (Dependencies.Material.material)
-    implementation (Dependencies.Androidx.constraintLayout)
-    testImplementation (Dependencies.Test.junit)
-    testImplementation (Dependencies.Coroutines.test)
-    testImplementation (Dependencies.Network.mockWebServer)
-    androidTestImplementation (Dependencies.Coroutines.test)
-    androidTestImplementation (Dependencies.Androidx.junit)
-    androidTestImplementation (Dependencies.Androidx.espresso)
+    implementation(Dependencies.Androidx.core)
+    implementation(Dependencies.Androidx.appcompat)
+    implementation(Dependencies.Material.material)
+    implementation(Dependencies.Androidx.constraintLayout)
+    testImplementation(Dependencies.Test.junit)
+    testImplementation(Dependencies.Coroutines.test)
+    testImplementation(Dependencies.Network.mockWebServer)
+    androidTestImplementation(Dependencies.Coroutines.test)
+    androidTestImplementation(Dependencies.Androidx.junit)
+    androidTestImplementation(Dependencies.Androidx.espresso)
 
     //Hilt
-    implementation (Dependencies.Hilt.hiltAndroid)
-    kapt (Dependencies.Hilt.hiltAndroidCompiler)
-    kapt (Dependencies.Hilt.hiltCompiler)
+    implementation(Dependencies.Hilt.hiltAndroid)
+    kapt(Dependencies.Hilt.hiltAndroidCompiler)
+    kapt(Dependencies.Hilt.hiltCompiler)
 
     //Flow
-    implementation (Dependencies.Coroutines.core)
+    implementation(Dependencies.Coroutines.core)
 
     //Coil
-    implementation (Dependencies.Coil.coil)
+    implementation(Dependencies.Coil.coil)
 
-    implementation (Dependencies.Androidx.recyclerView)
+    implementation(Dependencies.Androidx.recyclerView)
 
     //ktx
-    implementation (Dependencies.Androidx.activityKtx)
-    implementation (Dependencies.Androidx.fragmentKtx)
-    implementation (Dependencies.Androidx.viewModelKtx)
+    implementation(Dependencies.Androidx.activityKtx)
+    implementation(Dependencies.Androidx.fragmentKtx)
+    implementation(Dependencies.Androidx.viewModelKtx)
 
     //Paging3
-    implementation (Dependencies.Paging.paging)
-    implementation (Dependencies.Paging.pagingKtx)
+    implementation(Dependencies.Paging.paging)
+    implementation(Dependencies.Paging.pagingKtx)
 }

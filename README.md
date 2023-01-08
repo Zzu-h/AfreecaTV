@@ -20,20 +20,22 @@
 ## 🔥 화면
 
 ### Architecture
+
 - 추후 추가 예정
 
 ## 📖 Docs
+
 - [백로그](https://docs.google.com/spreadsheets/d/1Eeerz5xdZbg3aArxyEIFLAmZQ_TSlWCDHQVMBTHjeOk/edit?usp=sharing)
-- [기술스택](https://github.com/Zzu-h/AfreecaTV/wiki/Skill-Stack)  
+- [기술스택](https://github.com/Zzu-h/AfreecaTV/wiki/Skill-Stack)
 
-## 💡  Rule
+## 💡 Rule
 
-- [Git 사용법](https://github.com/Zzu-h/AfreecaTV/wiki/Git-%EC%82%AC%EC%9A%A9%EB%B2%95)  
-- [Coding Convention](https://github.com/Zzu-h/AfreecaTV/wiki/Coding-Convention)  
+- [Git 사용법](https://github.com/Zzu-h/AfreecaTV/wiki/Git-%EC%82%AC%EC%9A%A9%EB%B2%95)
+- [Coding Convention](https://github.com/Zzu-h/AfreecaTV/wiki/Coding-Convention)
 
 ## 🚀 스프린트
 
-- [Sprint 계획](https://github.com/Zzu-h/AfreecaTV/wiki/Sprint-계획)  
+- [Sprint 계획](https://github.com/Zzu-h/AfreecaTV/wiki/Sprint-계획)
 
 ## 🧑‍💻 고민했던 내용
 
